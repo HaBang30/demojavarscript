@@ -12,9 +12,19 @@
 </body>
 </html>
 <script>
-   a = prompt ("nhap a");
-   b = prompt ("nhap b");
-   a= parseInt (a);
-   b = parseInt (b);
-   document.write ("a + b = " + (a + b) + "<br/>");
+    var inputinvest;
+    var inputyear;
+    var inputprofit;
+    inputinvest = prompt ('enter the invest');
+    inputyear = prompt ('enter the year');
+    inputprofit = prompt ('enter the profit');
+    inputinvest = parseFloat(inputinvest);
+    inputyear = parseFloat(inputyear);
+    inputprofit = parseFloat(inputprofit);
+    document.write ("invest: " + inputinvest + "<br/>");
+    document.write ("year: " + inputyear + "<br/>");
+    document.write ("profit: " + inputprofit + "<br/>");
+    var area = inputinvest + inputyear * inputprofit;
+    document.write ("result: " + area);
 </script>
+
