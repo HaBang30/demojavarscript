@@ -58,4 +58,31 @@
     document.write ("Thoi gian:" + time);
     document.write ("Ket qua hien thi:" + content);
 </script>
+    script>
+        console.log('Hello world');
+    </script>
+    <script>
+        document.write('Hello world');
+    </script>
+    <script>
+    alert('Hello world');
+    </script>
+
+
+
+    <body>
+   <button onclick="showmessage1()">Click</button>
+   <button id="btn2">cach 2</button>
+</body>
+</html>
+<script>
+   function showmessage1() {
+       alert("da lam cach 1"); 
+   }
+   var button2 = document.getElementById("btn2");
+   button2.addEventListener("click", showmessage2);
+   function showmessage2() {
+       alert("da lam cach 2");
+   } 
+</script>
 */

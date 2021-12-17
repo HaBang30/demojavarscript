@@ -8,23 +8,32 @@
   
 </head>
 <body>
-   
+   <select  Id="cityvalue" onchange="showvalue()">
+       <option value="HN">Ha Noi</option>
+       <option value="Hue">Thanh Kinh</option>
+       <option value="DN">Da Nang</option>
+       <option value="TPHCM">Ho Chi Minh</option>
+   </select>
+
+   <select  id="cityvalue1">
+    <option value="HN">Ha Noi</option>
+    <option value="Hue">Thanh Kinh</option>
+    <option value="DN">Da Nang</option>
+    <option value="TPHCM">Ho Chi Minh</option>
+</select>
 </body>
 </html>
 <script>
-    var inputinvest;
-    var inputyear;
-    var inputprofit;
-    inputinvest = prompt ('enter the invest');
-    inputyear = prompt ('enter the year');
-    inputprofit = prompt ('enter the profit');
-    inputinvest = parseFloat(inputinvest);
-    inputyear = parseFloat(inputyear);
-    inputprofit = parseFloat(inputprofit);
-    document.write ("invest: " + inputinvest + "<br/>");
-    document.write ("year: " + inputyear + "<br/>");
-    document.write ("profit: " + inputprofit + "<br/>");
-    var area = inputinvest + inputyear * inputprofit;
-    document.write ("result: " + area);
+   function showvalue() {
+      var myvalue = document.getElementById('cityvalue').value;
+      alert(myvalue); 
+   }
+   //cach 2
+   var myselect = document.getElementById ('cityvalue1');
+   myselect.addEventListener("change", showvalue1);
+   function showvalue1() {
+       var myvalue1 = document.getElementById ('cityvalue1').value;
+       alert (myvalue1);
+   }
 </script>
 
