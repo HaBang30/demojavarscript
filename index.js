@@ -71,18 +71,78 @@
 
 
     <body>
-   <button onclick="showmessage1()">Click</button>
-   <button id="btn2">cach 2</button>
-</body>
-</html>
-<script>
-   function showmessage1() {
-       alert("da lam cach 1"); 
-   }
-   var button2 = document.getElementById("btn2");
-   button2.addEventListener("click", showmessage2);
-   function showmessage2() {
-       alert("da lam cach 2");
-   } 
-</script>
+        <button onclick="showmessage1()">Click</button>
+        <button id="btn2">cach 2</button>
+    </body>
+    </html>
+    <script>
+        function showmessage1() {
+            alert("da lam cach 1"); 
+        }
+        var button2 = document.getElementById("btn2");
+        button2.addEventListener("click", showmessage2);
+        function showmessage2() {
+            alert("da lam cach 2");
+        } 
+    </script>
+
+        /*
+        onmouseover & onmouseout
+
+        <body>
+        <h4 id="demo">I'm a Billionaire</h4>
+    </body>
+    </html>
+    <script>
+        var demo = document.getElementById('demo');
+        demo.addEventListener("mouseover", mouseover);
+        demo.addEventListener("mouseout", mouseout);
+        function mouseover() {
+            document.getElementById('demo').style.color = "red";
+        }
+        function mouseout() {
+            document.getElementById('demo').style.color = "blue";
+        }
+    </script>
+        */
+    <body>
+    <form action="" method="post">
+        <input id="n1" type="text" >
+        <input id="n2" type="text" > <br> <br>
+        <button type="button" onclick="addition()">Addition(+)</button>
+        <button type="button" onclick="subtraction()">Subtraction(-)</button>
+        <button type="button" onclick="multiplication()">Multiplication(x)</button>
+        <button type="button" onclick="division()">Division(/)</button>
+    </form>   
+
+    </body>
+    </html>
+
+    <script>
+        function addition() {
+            var n1 =document.getElementById('n1').value;
+            var n2 =document.getElementById('n2').value;
+            var addition = parseFloat(n1) + parseFloat(n2);
+            alert ("Result addition: " + addition);
+        }
+        function subtraction() {
+            var n1 =document.getElementById('n1').value;
+            var n2 =document.getElementById('n2').value;
+            var subtraction = parseFloat(n1) - parseFloat(n2);
+            document.write ("Result subtraction: " + subtraction);
+        }
+        function multiplication() {
+            var n1 =document.getElementById('n1').value;
+            var n2 =document.getElementById('n2').value;
+            var multiplication = parseFloat(n1) * parseFloat(n2);
+            document.write ("Result multiplication: " + multiplication);
+        }
+        function division() {
+            var n1 =document.getElementById('n1').value;
+            var n2 =document.getElementById('n2').value;
+            var division = parseFloat(n1) / parseFloat(n2);
+            document.write ("Result division: " + division);
+        }
+        </script>
+
 */

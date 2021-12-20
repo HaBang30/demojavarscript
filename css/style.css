@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#container {
+    width: 19em;
+    height: 15em;
+    border: 5px solid red;
+    text-align: center;
+}
+#container > #kq {
+    width: 18em;
+    height: 3.2em;
+}
+#container > input {
+    width: 3.4em;
+    height: 3.2em;
+    margin-top: 0.2em;
+}

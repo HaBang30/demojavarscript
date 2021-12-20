@@ -5,35 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
   
 </head>
 <body>
-   <select  Id="cityvalue" onchange="showvalue()">
-       <option value="HN">Ha Noi</option>
-       <option value="Hue">Thanh Kinh</option>
-       <option value="DN">Da Nang</option>
-       <option value="TPHCM">Ho Chi Minh</option>
-   </select>
+    <div id="container">
+        <input id="kq" placeholder="hien thi ket qua"/> <br>
+        <input type="button" value="1" onclick="set_num(this.value)"/>
+        <input type="button" value="2" onclick="set_num(this.value)"/>
+        <input type="button" value="3" onclick="set_num(this.value)"/>
+        <input type="button" value="+" onclick="set_num(this.value)"/>
+        <input type="button" value="-" onclick="set_num(this.value)"/> <br>
+        <input type="button" value="4" onclick="set_num(this.value)"/>
+        <input type="button" value="5" onclick="set_num(this.value)"/>
+        <input type="button" value="6" onclick="set_num(this.value)"/>
+        <input type="button" value="*" onclick="set_num(this.value)"/>
+        <input type="button" value="/" onclick="set_num(this.value)"/> <br>
+        <input type="button" value="7" onclick="set_num(this.value)"/>
+        <input type="button" value="8" onclick="set_num(this.value)"/>
+        <input type="button" value="9" onclick="set_num(this.value)"/>
+        <input type="button" value="=" onclick="ketqua()"/>
+        <input type="button" value="Del" onclick="xoa()"/>
+      
+    </div>
 
-   <select  id="cityvalue1">
-    <option value="HN">Ha Noi</option>
-    <option value="Hue">Thanh Kinh</option>
-    <option value="DN">Da Nang</option>
-    <option value="TPHCM">Ho Chi Minh</option>
-</select>
 </body>
 </html>
-<script>
-   function showvalue() {
-      var myvalue = document.getElementById('cityvalue').value;
-      alert(myvalue); 
-   }
-   //cach 2
-   var myselect = document.getElementById ('cityvalue1');
-   myselect.addEventListener("change", showvalue1);
-   function showvalue1() {
-       var myvalue1 = document.getElementById ('cityvalue1').value;
-       alert (myvalue1);
-   }
-</script>
+
+    <script>
+        var x ="";
+        function a(id) {
+            return document.getElementById(id);
+        }
+        function set_num(num) {
+            x+=num;
+                a('kq').value = x;
+        }
+        function xoa() {
+            x = "";
+                a('kq').value=x;
+            
+        }
+        function ketqua() {
+            a('kq').value=eval(a('kq').value);
+            x = a('kq').value;   
+        }
+    </script>
 
