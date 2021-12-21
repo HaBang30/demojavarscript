@@ -145,4 +145,33 @@
         }
         </script>
 
+        <script>
+       var kg;
+       var h;
+       kg = prompt('Nhập cân nặng của bạn');
+       h = prompt ('Nhập chiều cao của bạn');
+       kg = parseFloat (kg);
+       h = parseFloat (h);
+       var bmi = kg / (h * h);
+       if (bmi < 16) {
+            document.write ('Gầy độ 3');
+       }else if (bmi >= 16 && bmi < 17) {
+            alert ('Gầy độ 2');
+       }else if (bmi >= 17 && bmi < 18.5) {
+            alert ('Gầy độ 1');
+       }else if (bmi >= 18.5 && bmi < 25) {
+            document.write ('Bình thường');
+       }else if (bmi >= 25 && bmi < 30) {
+            alert ('Thừa cân');
+       }else if (bmi >= 30 && bmi < 35) {
+            document.write ('Béo phì độ 1');
+       }else if (bmi >= 35 && bmi < 40) {
+            alert ('Béo phì độ 2');
+       }else {
+            document.write ('Béo phì độ 3');
+       }
+    
+    </script>
+
+
 */
