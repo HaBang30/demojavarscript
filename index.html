@@ -6,45 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
 </head>
 <body>
-     <form action="" method="get" style="margin-top: 50px;">
-          <tr>
-               <strong>Amount</strong>
-               <input type="text" id="input" name="amount" placeholder="Enter amount"/>
-               <strong>From Currency</strong>
-               <select name="choose" id="select1">
-                    <option value="VN">VNĐ</option>
-                    <option value="USD">USD</option>
-                   
-               </select>
-               <strong>To Currency</strong>
-               <select name="choose" id="select2">
-                    <option value="VN">VNĐ</option>
-                    <option value="USD">USD</option>
-               </select>
-               <button onclick="appear()">Convert</button>
-          </tr>
-     </form>
+     
+     <div style="border: 2px solid red; height: 200px; width: 200px; background-color: black; margin: auto;">
+          <img src="images/tank.png" id="tank" style="position: relative; top: 10px; left: 10px; width: 50px; height: 50px;">
+     </div>
+     <div style="margin-left: 46%; margin-top: 2%;">
+     <button onclick="moveup()" style="margin-left: 30px; width: 30px; height: 30px;"><i class="fas fa-arrow-alt-circle-up" style="font-size: 20px;"></i></button> <br>
+     <button onclick="moveleft()" style="width: 30px; height: 30px;"><i class="fas fa-arrow-alt-circle-left" style="font-size: 20px;"></i></button>
+     <button onclick="moveright()" style="margin-left: 28px; width: 30px; height: 30px;"><i class="fas fa-arrow-alt-circle-right" style="font-size: 20px;"></i></button> <br>
+     <button onclick="movedown()" style="margin-left: 30px; width: 30px; height: 30px;"><i class="fas fa-arrow-alt-circle-down" style="font-size: 20px;"></i></button>
   
+     </div>    
 </body>
 </html>
 
     <script>
-        function appear() {
-             let enter = document.getElementById('input').value;
-             let select1 = document.getElementById('select1').value;
-             let select2 = document.getElementById('select2').value;
-             if (select1 == select2) {
-                    alert (enter);
-             }
-             if (select1 == "VN" && select2 == "USD") {
-                  alert(enter/24000);
-             }
-             if (select1 == "USD" && select2 == "VN") {
-                  alert(enter*24000);
-             }
-        }
+         function moveup() {
+          let img = document.getElementById('tank')
+               let top = parseInt(img.style.top)
+               console.log(top);
+               img.style.top =(top - 10) + "px"
+         }
+         function movedown() {
+               let img = document.getElementById('tank')
+               let top = parseInt(img.style.top)
+               img.style.top =(top + 10) + "px"
+         }
+         function moveleft() {
+               let img = document.getElementById('tank')
+               let left = parseInt(img.style.left)
+               img.style.left =(left - 10) + "px"
+         }
+         function moveright() {
+               let img = document.getElementById('tank')
+               let left = parseInt(img.style.left)
+               img.style.left =(left + 10) + "px"
+         }
+         
+         
     </script>
-
